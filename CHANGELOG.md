@@ -165,6 +165,7 @@ allows submitting to the app store with Xcode 12.
 * Replace Xcode 13.3 binaries with 13.3.1 binaries.
 
 ### Fixed
+* Defer `Realm.asyncOpen` operation on `@AsyncOpen` and `@AutoOpen` property wrappers, this will guarantee all the environment values are setted before opening any realm.
 
 * `List<AnyRealmValue>` would contain an invalidated object instead of null when
   the object linked to was deleted by a difference sync client
