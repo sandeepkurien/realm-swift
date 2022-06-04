@@ -5,7 +5,7 @@ source_root="$(dirname "$0")/.."
 readonly source_root
 
 # override this env variable if you need to download from a private mirror
-: "${REALM_BASE_URL:="https://static.realm.io/downloads"}"
+: "${REALM_BASE_URL:="http://static.realm.io/downloads"}"
 # set to "current" to always use the current build
 : "${REALM_CORE_VERSION:=$(sed -n 's/^REALM_CORE_VERSION=\(.*\)$/\1/p' "${source_root}/dependencies.list")}"
 # Provide a fallback value for TMPDIR, relevant for Xcode Bots
